@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+//create a function that returns like a render
+//you cant use a tags in react, you use a link tag
 function Header() {
   return (
     <header style={headerStyle}>

@@ -1,17 +1,22 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+//the input field should be state for the component
 export class AddTodo extends Component {
   state = {
     title: ''
   }
 
   onSubmit = (e) => {
+    //prevent it from submitting to the actual file
     e.preventDefault();
+    //pass the title up
     this.props.addTodo(this.state.title);
     this.setState({ title: '' });
   }
 
+                                    //as long as name is equal to whatever the field
+                                    //is you can reuse this for different inputs
   onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
   render() {
